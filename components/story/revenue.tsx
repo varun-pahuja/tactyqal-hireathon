@@ -32,7 +32,7 @@ export default function RevenueTicker() {
   return (
     <section
       ref={root}
-      className="relative overflow-hidden border-y border-white/5 bg-[#171b19]"
+      className="relative overflow-hidden border-y border-white/5 bg-[#0a0a0a]"
       aria-label="Results"
     >
       <div
@@ -40,13 +40,13 @@ export default function RevenueTicker() {
         aria-hidden
       />
       <div className="container-x relative py-16 sm:py-20">
-        <p className="text-center text-sm font-medium uppercase tracking-[0.3em] text-muted-grey/80">
+        <p className="text-center text-sm font-medium uppercase tracking-[0.3em] text-dim/80">
           Chapter 04 — the receipts
         </p>
         <div className="mt-10 grid grid-cols-2 gap-8 text-center lg:grid-cols-4">
           {stats.map((s) => (
             <div key={s.label} className="rev-item">
-              <strong className="block font-heading text-[clamp(2.2rem,5vw,3.8rem)] font-extrabold text-sage-400">
+              <strong className="block font-heading text-[clamp(2.2rem,5vw,3.8rem)] font-semibold text-brand-400">
                 {s.format === "currency" ? (
                   <>
                     ₹<CountUp value={s.value} />
@@ -55,7 +55,7 @@ export default function RevenueTicker() {
                   <CountUp value={s.value} suffix={s.suffix} />
                 )}
               </strong>
-              <span className="mt-2 block text-sm uppercase tracking-wider text-muted-grey">
+              <span className="mt-2 block text-sm uppercase tracking-wider text-dim">
                 {s.label}
               </span>
             </div>

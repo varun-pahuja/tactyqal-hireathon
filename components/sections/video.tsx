@@ -11,10 +11,10 @@ export default function VideoSection() {
     <section className="section-pad">
       <div className="container-x">
         <Reveal>
-          <h2 className="text-center font-heading text-3xl font-bold sm:text-4xl md:text-5xl">
+          <h2 className="text-center font-heading text-3xl font-medium sm:text-4xl md:text-5xl">
             Startup Ideas <span className="text-gradient">101</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-center text-muted-grey">
+          <p className="mx-auto mt-4 max-w-xl text-center text-dim">
             Learn how to identify and validate profitable startup ideas from our
             founder.
           </p>
@@ -35,15 +35,15 @@ export default function VideoSection() {
               <button
                 type="button"
                 onClick={() => setLoaded(true)}
-                className="group absolute inset-0 flex flex-col items-center justify-center gap-4 bg-[linear-gradient(135deg,#141515,#242b27)] focus-visible:outline-2 focus-visible:outline-sage-400"
+                className="group absolute inset-0 flex flex-col items-center justify-center gap-4 bg-[linear-gradient(135deg,#030303,#242b27)] focus-visible:outline-2 focus-visible:outline-brand-400"
               >
                 <span className="flex h-16 w-16 items-center justify-center rounded-full bg-red-600 shadow-lg shadow-red-600/40 transition-transform group-hover:scale-110">
                   <Play className="ml-1 h-7 w-7 fill-white text-white" aria-hidden />
                 </span>
-                <span className="text-sm font-medium text-cream/85">
+                <span className="text-sm font-medium text-ink/85">
                   Watch: How to Come Up with Startup Ideas
                 </span>
-                <span className="text-xs text-muted-grey/80">Click to load video</span>
+                <span className="text-xs text-dim/80">Click to load video</span>
               </button>
             )}
           </div>

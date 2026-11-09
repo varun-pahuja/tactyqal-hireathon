@@ -1,12 +1,8 @@
 export const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "The Journey", href: "#program" },
-  { label: "Shipped Apps", href: "#stories" },
-  { label: "Find Your Idea", href: "#quiz" },
-  { label: "Why Us", href: "#why" },
-  { label: "Blog", href: "#blog" },
+  { label: "Features", href: "#program" },
   { label: "Pricing", href: "#pricing" },
-  { label: "FAQ", href: "#faq" },
+  { label: "FAQs", href: "#faq" },
+  { label: "Blog", href: "#blog" },
 ];
 
 export const heroStats = [

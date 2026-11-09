@@ -43,13 +43,13 @@ export default async function BlogPost({ params }: Props) {
     <main className="pt-24 md:pt-28">
       <article className="section-pad">
         <div className="container-x max-w-3xl">
-          <Link href="/blog" className="text-sm text-sage-400 hover:underline">
+          <Link href="/blog" className="text-sm text-brand-400 hover:underline">
             ← All articles
           </Link>
 
-          <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-muted-grey">
+          <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-dim">
             {category && (
-              <span className="rounded-full bg-sage-500/15 px-3 py-1 text-xs font-semibold text-sage-300">
+              <span className="rounded-full bg-brand-500/15 px-3 py-1 text-xs font-semibold text-brand-300">
                 {category.name}
               </span>
             )}
@@ -65,12 +65,12 @@ export default async function BlogPost({ params }: Props) {
             {post.read_time && <span>• {post.read_time} min read</span>}
           </div>
 
-          <h1 className="mt-4 font-heading text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
+          <h1 className="mt-4 font-heading text-3xl font-medium leading-tight sm:text-4xl md:text-5xl">
             {post.title}
           </h1>
 
           {author && (
-            <p className="mt-4 text-sm text-muted-grey">By {author.name}</p>
+            <p className="mt-4 text-sm text-dim">By {author.name}</p>
           )}
 
           {post.cover_image && (
@@ -93,7 +93,7 @@ export default async function BlogPost({ params }: Props) {
           <hr className="my-10 border-white/10" />
           <Link
             href="/blog"
-            className="inline-flex h-11 items-center rounded-full bg-sage-500 px-6 font-semibold text-noir transition hover:bg-sage-400"
+            className="inline-flex h-11 items-center rounded-full bg-brand-500 px-6 font-semibold text-white transition hover:bg-brand-400"
           >
             More articles
           </Link>

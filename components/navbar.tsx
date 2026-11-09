@@ -1,96 +1,91 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import { navLinks } from "@/lib/content";
 
+function StarMark() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-4 w-4 text-brand-300" fill="currentColor" aria-hidden>
+      <path d="M12 1C12.6 7 15 9.4 21 10 15 10.6 12.6 13 12 19 11.4 13 9 10.6 3 10 9 9.4 11.4 7 12 1Z" />
+    </svg>
+  );
+}
+
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-  const [progress, setProgress] = useState(0);
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 24);
-      const max = document.documentElement.scrollHeight - window.innerHeight;
-      setProgress(max > 0 ? window.scrollY / max : 0);
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass border-b border-white/5 shadow-lg shadow-black/20" : "bg-transparent"
-      }`}
-    >
-      <div
-        className="absolute inset-x-0 bottom-0 h-0.5 origin-left bg-gradient-to-r from-sage-500 via-sage-400 to-sage-300"
-        style={{ transform: `scaleX(${progress})` }}
-        aria-hidden
-      />
-      <div className="container-x flex h-16 items-center justify-between md:h-20">
-        <Link href="#home" className="font-heading text-xl font-bold tracking-tight md:text-2xl">
-          Tactyqal <span className="text-gradient">Labs</span>
+    <header className="fixed left-1/2 top-[30px] z-50 w-max max-w-[calc(100vw-24px)] -translate-x-1/2">
+      <nav
+        className="flex h-[52px] items-center gap-0.5 rounded-full border border-white/[0.06] bg-[#171717]/95 px-2.5 py-2 backdrop-blur-md"
+        aria-label="Primary"
+      >
+        <Link
+          href="#home"
+          className="flex items-center gap-2 rounded-full px-2.5 py-1.5 text-[13px] font-medium text-ink transition-colors hover:text-white"
+        >
+          <StarMark />
+          Tactyqal
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
+        <span className="mx-1 hidden h-4 w-px bg-white/10 md:block" aria-hidden />
+
+        <div className="hidden items-center md:flex">
           {navLinks.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="rounded-full px-3 py-2 text-sm font-medium text-cream transition-colors hover:bg-white/5 hover:text-sage-300 focus-visible:outline-2 focus-visible:outline-sage-400"
+              className="rounded-full px-3 py-1.5 text-[13px] font-normal text-[#858585] transition-colors hover:text-ink focus-visible:outline-2 focus-visible:outline-brand-400"
             >
               {l.label}
             </a>
           ))}
-        </nav>
-
-        <div className="flex items-center gap-2">
-          <Button
-            asChild
-            className="hidden rounded-full bg-sage-500 font-semibold text-noir hover:bg-sage-400 md:inline-flex"
-          >
-            <a href="#contact">Contact</a>
-          </Button>
-
-          <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 lg:hidden">
-              <span className="sr-only">Open menu</span>
-              <Menu className="h-5 w-5" aria-hidden />
-            </SheetTrigger>
-            <SheetContent side="right" className="w-72 border-white/10 bg-[#141515]">
-              <SheetTitle className="font-heading text-lg font-bold">
-                Tactyqal <span className="text-gradient">Labs</span>
-              </SheetTitle>
-              <nav className="mt-8 flex flex-col gap-1" aria-label="Mobile">
-                {navLinks.map((l) => (
-                  <a
-                    key={l.href}
-                    href={l.href}
-                    onClick={() => setOpen(false)}
-                    className="rounded-lg px-3 py-3 text-base font-medium text-cream transition-colors hover:bg-white/5 hover:text-sage-300"
-                  >
-                    {l.label}
-                  </a>
-                ))}
-                <a
-                  href="#contact"
-                  onClick={() => setOpen(false)}
-                  className="mt-3 rounded-full bg-sage-500 px-4 py-3 text-center font-semibold text-noir"
-                >
-                  Contact
-                </a>
-              </nav>
-            </SheetContent>
-          </Sheet>
         </div>
-      </div>
+
+        <a
+          href="#contact"
+          className="ml-1 hidden rounded-full bg-charcoal px-4 py-1.5 text-[13px] font-medium text-ink transition-colors hover:bg-[#333333] md:inline-flex"
+        >
+          Contact Us
+        </a>
+
+        <Sheet open={open} onOpenChange={setOpen}>
+          <SheetTrigger
+            className="ml-1 inline-flex h-9 w-9 items-center justify-center rounded-full text-[#858585] transition-colors hover:text-ink md:hidden"
+            aria-label="Open menu"
+          >
+            <Menu className="h-4 w-4" aria-hidden />
+          </SheetTrigger>
+          <SheetContent side="right" className="w-72 border-white/10 bg-[#0a0a0a]">
+            <SheetTitle className="flex items-center gap-2 font-heading text-base font-medium text-ink">
+              <StarMark />
+              Tactyqal
+            </SheetTitle>
+            <nav className="mt-8 flex flex-col gap-1" aria-label="Mobile">
+              {navLinks.map((l) => (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  className="rounded-lg px-3 py-3 text-sm text-[#858585] transition-colors hover:bg-white/5 hover:text-ink"
+                >
+                  {l.label}
+                </a>
+              ))}
+              <a
+                href="#contact"
+                onClick={() => setOpen(false)}
+                className="mt-3 rounded-full bg-charcoal px-4 py-3 text-center text-sm font-medium text-ink"
+              >
+                Contact Us
+              </a>
+            </nav>
+          </SheetContent>
+        </Sheet>
+      </nav>
     </header>
   );
 }

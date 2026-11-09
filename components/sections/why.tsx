@@ -25,10 +25,10 @@ const icons: Record<string, LucideIcon> = {
 
 export default function Why() {
   return (
-    <section id="why" className="section-pad border-t border-white/5 bg-[#171b19]">
+    <section id="why" className="section-pad border-t border-white/5 bg-[#0a0a0a]">
       <div className="container-x">
         <Reveal>
-          <h2 className="text-center font-heading text-3xl font-bold sm:text-4xl md:text-5xl">
+          <h2 className="text-center font-heading text-3xl font-medium sm:text-4xl md:text-5xl">
             Why Parents Choose <span className="text-gradient">Tactyqal Labs</span>
           </h2>
         </Reveal>
@@ -45,19 +45,19 @@ export default function Why() {
                 className={featured ? "lg:col-span-2 lg:row-span-1" : ""}
               >
                 <div
-                  className={`group h-full rounded-2xl border border-white/10 bg-card p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-sage-400/40 hover:shadow-xl hover:shadow-sage-500/5 ${
+                  className={`group h-full rounded-2xl border border-white/10 bg-card p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/40 hover:shadow-xl hover:shadow-brand-500/5 ${
                     featured
-                      ? "bg-gradient-to-br from-sage-500/10 to-transparent"
+                      ? "bg-gradient-to-br from-brand-500/10 to-transparent"
                       : ""
                   }`}
                 >
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-sage-500/15 text-sage-400 transition-colors group-hover:bg-sage-500/25">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-500/15 text-brand-400 transition-colors group-hover:bg-brand-500/25">
                     <Icon className="h-5 w-5" aria-hidden />
                   </div>
-                  <h3 className="mt-4 font-heading text-base font-bold text-cream">
+                  <h3 className="mt-4 font-heading text-base font-medium text-ink">
                     {f.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-grey">
+                  <p className="mt-2 text-sm leading-relaxed text-dim">
                     {f.description}
                   </p>
                 </div>
