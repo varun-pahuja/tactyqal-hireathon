@@ -26,7 +26,7 @@ export default function Footer() {
                 <a
                   key={s.label}
                   href={s.href}
-                  className="rounded-full border border-white/10 px-3 py-1.5 text-xs font-medium text-slate-400 transition-colors hover:border-emerald-400/50 hover:text-emerald-400"
+                  className="rounded-full border border-white/10 px-3 py-1.5 text-xs font-medium text-slate-400 transition-colors hover:border-coral-400/50 hover:text-coral-400"
                 >
                   {s.label}
                 </a>
@@ -43,7 +43,7 @@ export default function Footer() {
                 <li key={l.href}>
                   <a
                     href={l.href}
-                    className="text-sm text-slate-400 transition-colors hover:text-emerald-400"
+                    className="text-sm text-slate-400 transition-colors hover:text-coral-400"
                   >
                     {l.label}
                   </a>
@@ -60,7 +60,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`mailto:${contact.email}`}
-                  className="flex items-center gap-2 transition-colors hover:text-emerald-400"
+                  className="flex items-center gap-2 transition-colors hover:text-coral-400"
                 >
                   <Mail className="h-4 w-4 shrink-0" aria-hidden />
                   <span className="break-all">{contact.email}</span>
@@ -69,7 +69,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`tel:${contact.phone.replace(/[^+\d]/g, "")}`}
-                  className="flex items-center gap-2 transition-colors hover:text-emerald-400"
+                  className="flex items-center gap-2 transition-colors hover:text-coral-400"
                 >
                   <Phone className="h-4 w-4 shrink-0" aria-hidden />
                   {contact.phone}
@@ -84,7 +84,7 @@ export default function Footer() {
           <p>© 2026 Tactyqal Labs. All rights reserved.</p>
           <p>
             Built for the Tactyqal Labs hire-a-thon ·{" "}
-            <Link href="/admin" className="hover:text-emerald-400">
+            <Link href="/admin" className="hover:text-coral-400">
               Admin
             </Link>
           </p>

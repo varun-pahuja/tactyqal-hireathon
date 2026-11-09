@@ -35,7 +35,7 @@ export default function VideoSection() {
               <button
                 type="button"
                 onClick={() => setLoaded(true)}
-                className="group absolute inset-0 flex flex-col items-center justify-center gap-4 bg-[linear-gradient(135deg,#0f172a,#134e4a)] focus-visible:outline-2 focus-visible:outline-emerald-400"
+                className="group absolute inset-0 flex flex-col items-center justify-center gap-4 bg-[linear-gradient(135deg,#0f172a,#134e4a)] focus-visible:outline-2 focus-visible:outline-coral-400"
               >
                 <span className="flex h-16 w-16 items-center justify-center rounded-full bg-red-600 shadow-lg shadow-red-600/40 transition-transform group-hover:scale-110">
                   <Play className="ml-1 h-7 w-7 fill-white text-white" aria-hidden />

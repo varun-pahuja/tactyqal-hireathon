@@ -212,7 +212,7 @@ export default function AdminPage() {
   if (checking) {
     return (
       <main className="flex min-h-screen items-center justify-center">
-        <Loader2 className="h-6 w-6 animate-spin text-emerald-400" aria-label="Loading" />
+        <Loader2 className="h-6 w-6 animate-spin text-coral-400" aria-label="Loading" />
       </main>
     );
   }
@@ -261,7 +261,7 @@ export default function AdminPage() {
           <Button
             type="submit"
             disabled={signingIn}
-            className="mt-6 w-full rounded-full bg-emerald-500 font-semibold text-emerald-950 hover:bg-emerald-400"
+            className="mt-6 w-full rounded-full bg-coral-500 font-semibold text-navy hover:bg-coral-400"
           >
             {signingIn ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
             Sign in
@@ -286,7 +286,7 @@ export default function AdminPage() {
           <div className="flex gap-2">
             <Button
               onClick={openCreate}
-              className="rounded-full bg-emerald-500 font-semibold text-emerald-950 hover:bg-emerald-400"
+              className="rounded-full bg-coral-500 font-semibold text-navy hover:bg-coral-400"
             >
               <Plus className="mr-1.5 h-4 w-4" aria-hidden /> New post
             </Button>
@@ -341,7 +341,7 @@ export default function AdminPage() {
                     <Badge
                       className={
                         p.status === "published"
-                          ? "bg-emerald-500/15 text-emerald-300"
+                          ? "bg-coral-500/15 text-coral-300"
                           : "bg-slate-500/20 text-slate-300"
                       }
                     >
@@ -507,7 +507,7 @@ export default function AdminPage() {
               <Button
                 type="submit"
                 disabled={saving}
-                className="rounded-full bg-emerald-500 font-semibold text-emerald-950 hover:bg-emerald-400"
+                className="rounded-full bg-coral-500 font-semibold text-navy hover:bg-coral-400"
               >
                 {saving && <Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden />}
                 {editing ? "Save changes" : "Create post"}

@@ -27,7 +27,7 @@ export default async function BlogIndex() {
         <div className="container-x">
           <Link
             href="/"
-            className="text-sm text-emerald-400 hover:underline"
+            className="text-sm text-coral-400 hover:underline"
           >
             ← Back to home
           </Link>
@@ -46,7 +46,7 @@ export default async function BlogIndex() {
               {posts.map((p) => (
                 <article
                   key={p.id}
-                  className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-card transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/40 hover:shadow-xl hover:shadow-emerald-500/10"
+                  className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-card transition-all duration-300 hover:-translate-y-1 hover:border-coral-400/40 hover:shadow-xl hover:shadow-coral-500/10"
                 >
                   {p.cover_image && (
                     <div className="relative aspect-[16/9] overflow-hidden bg-slate-900">
@@ -62,7 +62,7 @@ export default async function BlogIndex() {
                   )}
                   <div className="flex flex-1 flex-col p-5">
                     <div className="flex items-center gap-2">
-                      <Badge className="bg-emerald-500/15 text-emerald-300 hover:bg-emerald-500/20">
+                      <Badge className="bg-coral-500/15 text-coral-300 hover:bg-coral-500/20">
                         {p.published_at
                           ? new Date(p.published_at).toLocaleDateString("en-GB", {
                               day: "numeric",
@@ -80,7 +80,7 @@ export default async function BlogIndex() {
                     <h2 className="mt-3 font-heading text-lg font-bold leading-snug">
                       <Link
                         href={`/blog/${p.slug}`}
-                        className="after:absolute after:inset-0 after:content-[''] hover:text-emerald-300"
+                        className="after:absolute after:inset-0 after:content-[''] hover:text-coral-300"
                       >
                         {p.title}
                       </Link>

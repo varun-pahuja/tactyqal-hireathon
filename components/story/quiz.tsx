@@ -127,14 +127,14 @@ export default function Quiz() {
   return (
     <section
       id="quiz"
-      className="relative overflow-hidden border-y border-white/5 bg-[#0c1220] py-20 sm:py-28"
+      className="relative overflow-hidden border-y border-white/5 bg-[#0d2247] py-20 sm:py-28"
     >
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_55%_at_50%_0%,rgba(16,185,129,0.16),transparent_65%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_55%_at_50%_0%,rgba(255,107,107,0.16),transparent_65%)]"
         aria-hidden
       />
       <div className="container-x relative max-w-3xl text-center">
-        <span className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-emerald-300">
+        <span className="inline-flex items-center gap-2 rounded-full border border-coral-400/30 bg-coral-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-coral-300">
           <Sparkles className="h-3.5 w-3.5" aria-hidden />
           Interactive · 30 seconds
         </span>
@@ -156,7 +156,7 @@ export default function Quiz() {
           </div>
           <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-white/10">
             <div
-              className="h-full rounded-full bg-gradient-to-r from-emerald-400 to-teal-300 transition-[width] duration-500"
+              className="h-full rounded-full bg-gradient-to-r from-coral-400 to-cyan-300 transition-[width] duration-500"
               style={{ width: `${Math.max(progress * 100, 8)}%` }}
             />
           </div>
@@ -171,7 +171,7 @@ export default function Quiz() {
                   <button
                     key={a.label}
                     onClick={() => answer(a.kind)}
-                    className="group flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4 text-left font-medium text-slate-200 transition hover:border-emerald-400/50 hover:bg-emerald-500/10 hover:text-emerald-200 focus-visible:outline-2 focus-visible:outline-emerald-400"
+                    className="group flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4 text-left font-medium text-slate-200 transition hover:border-coral-400/50 hover:bg-coral-500/10 hover:text-coral-200 focus-visible:outline-2 focus-visible:outline-coral-400"
                   >
                     {a.label}
                     <Check
@@ -197,7 +197,7 @@ export default function Quiz() {
               <span className="text-5xl" aria-hidden>
                 {result.emoji}
               </span>
-              <h3 className="mt-4 font-heading text-2xl font-extrabold text-emerald-300 sm:text-3xl">
+              <h3 className="mt-4 font-heading text-2xl font-extrabold text-coral-300 sm:text-3xl">
                 {result.title}
               </h3>
               <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-slate-300 sm:text-base">
@@ -206,7 +206,7 @@ export default function Quiz() {
               <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
                 <a
                   href="#contact"
-                  className="inline-flex h-12 items-center rounded-full bg-emerald-500 px-8 font-semibold text-emerald-950 transition hover:bg-emerald-400"
+                  className="inline-flex h-12 items-center rounded-full bg-coral-500 px-8 font-semibold text-navy transition hover:bg-coral-400"
                 >
                   <Compass className="mr-2 h-4 w-4" aria-hidden />
                   Book a free 15-min call

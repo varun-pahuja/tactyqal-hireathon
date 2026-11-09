@@ -32,11 +32,11 @@ export default function RevenueTicker() {
   return (
     <section
       ref={root}
-      className="relative overflow-hidden border-y border-white/5 bg-[#0c1220]"
+      className="relative overflow-hidden border-y border-white/5 bg-[#0d2247]"
       aria-label="Results"
     >
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_120%,rgba(16,185,129,0.18),transparent_70%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_120%,rgba(255,107,107,0.18),transparent_70%)]"
         aria-hidden
       />
       <div className="container-x relative py-16 sm:py-20">
@@ -46,7 +46,7 @@ export default function RevenueTicker() {
         <div className="mt-10 grid grid-cols-2 gap-8 text-center lg:grid-cols-4">
           {stats.map((s) => (
             <div key={s.label} className="rev-item">
-              <strong className="block font-heading text-[clamp(2.2rem,5vw,3.8rem)] font-extrabold text-emerald-400">
+              <strong className="block font-heading text-[clamp(2.2rem,5vw,3.8rem)] font-extrabold text-coral-400">
                 {s.format === "currency" ? (
                   <>
                     ₹<CountUp value={s.value} />

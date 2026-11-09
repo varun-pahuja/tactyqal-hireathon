@@ -43,9 +43,9 @@ export default function Tools() {
               <Reveal key={tool} delay={i * 40}>
                 <a
                   href="#contact"
-                  className="group flex h-full flex-col items-center gap-3 rounded-2xl border border-white/10 bg-card p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/50 hover:shadow-xl hover:shadow-emerald-500/10 focus-visible:outline-2 focus-visible:outline-emerald-400"
+                  className="group flex h-full flex-col items-center gap-3 rounded-2xl border border-white/10 bg-card p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-coral-400/50 hover:shadow-xl hover:shadow-coral-500/10 focus-visible:outline-2 focus-visible:outline-coral-400"
                 >
-                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 transition-colors group-hover:bg-emerald-500/20">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-coral-500/10 text-coral-400 transition-colors group-hover:bg-coral-500/20">
                     <Icon className="h-6 w-6" aria-hidden />
                   </span>
                   <span className="text-sm font-semibold leading-snug text-slate-200">
@@ -61,7 +61,7 @@ export default function Tools() {
           <div className="mt-10 text-center">
             <a
               href="#contact"
-              className="inline-flex h-12 items-center rounded-full bg-emerald-500 px-8 font-semibold text-emerald-950 shadow-lg shadow-emerald-500/25 transition hover:bg-emerald-400"
+              className="inline-flex h-12 items-center rounded-full bg-coral-500 px-8 font-semibold text-navy shadow-lg shadow-coral-500/25 transition hover:bg-coral-400"
             >
               Access All Tools Free
             </a>

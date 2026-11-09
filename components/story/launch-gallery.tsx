@@ -10,7 +10,7 @@ const launches = [
     tag: "Agriculture · India",
     revenue: "₹1,00,000",
     revLabel: "monthly revenue",
-    tone: "emerald",
+    tone: "coral",
   },
   {
     name: "Aether",
@@ -26,7 +26,7 @@ const launches = [
     tag: "EdTech · India",
     revenue: "15+",
     revLabel: "schools live",
-    tone: "orange",
+    tone: "peach",
   },
   {
     name: "ReWear",
@@ -50,17 +50,17 @@ const launches = [
     tag: "HealthTech · India",
     revenue: "500+",
     revLabel: "patients supported",
-    tone: "amber",
+    tone: "cyanlite",
   },
 ];
 
 const toneMap: Record<string, string> = {
-  emerald: "border-emerald-400/30 from-emerald-400/20 to-transparent",
+  coral: "border-coral-400/30 from-coral-400/20 to-transparent",
   violet: "border-violet-400/30 from-violet-400/20 to-transparent",
-  orange: "border-orange-400/30 from-orange-400/20 to-transparent",
+  peach: "border-coral-300/30 from-coral-300/20 to-transparent",
   cyan: "border-cyan-400/30 from-cyan-400/20 to-transparent",
   fuchsia: "border-fuchsia-400/30 from-fuchsia-400/20 to-transparent",
-  amber: "border-amber-400/30 from-amber-400/20 to-transparent",
+  cyanlite: "border-cyan-300/30 from-cyan-300/20 to-transparent",
 };
 
 export default function LaunchGallery() {
@@ -133,7 +133,7 @@ export default function LaunchGallery() {
                 {s.line}
               </p>
               <div className="mt-5 flex items-baseline gap-2 border-t border-white/10 pt-4">
-                <strong className="font-heading text-3xl font-extrabold text-emerald-400">
+                <strong className="font-heading text-3xl font-extrabold text-coral-400">
                   {s.revenue}
                 </strong>
                 <span className="text-xs uppercase tracking-wider text-slate-500">

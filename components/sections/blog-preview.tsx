@@ -61,7 +61,7 @@ export default function BlogPreview() {
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {posts.map((p, i) => (
               <Reveal key={p.id} delay={i * 60}>
-                <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-card transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/40 hover:shadow-xl hover:shadow-emerald-500/10">
+                <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-card transition-all duration-300 hover:-translate-y-1 hover:border-coral-400/40 hover:shadow-xl hover:shadow-coral-500/10">
                   {p.cover_image && (
                     <div className="relative aspect-[16/9] overflow-hidden bg-slate-900">
                       <Image
@@ -75,7 +75,7 @@ export default function BlogPreview() {
                     </div>
                   )}
                   <div className="flex flex-1 flex-col p-5">
-                    <h3 className="font-heading text-base font-bold leading-snug text-slate-100 group-hover:text-emerald-300">
+                    <h3 className="font-heading text-base font-bold leading-snug text-slate-100 group-hover:text-coral-300">
                       <Link href={`/blog/${p.slug}`} className="after:absolute after:inset-0 after:content-['']">
                         {p.title}
                       </Link>
@@ -111,7 +111,7 @@ export default function BlogPreview() {
           <div className="mt-10 text-center">
             <Link
               href="/blog"
-              className="inline-flex h-12 items-center rounded-full bg-emerald-500 px-8 font-semibold text-emerald-950 shadow-lg shadow-emerald-500/25 transition hover:bg-emerald-400"
+              className="inline-flex h-12 items-center rounded-full bg-coral-500 px-8 font-semibold text-navy shadow-lg shadow-coral-500/25 transition hover:bg-coral-400"
             >
               Read All Articles
             </Link>

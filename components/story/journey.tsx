@@ -8,29 +8,29 @@ const weeks = [
     week: "Week 1–2",
     title: "Ideation & Market Research",
     body: "Find the idea worth building. Talk to real users. Kill the weak ones fast.",
-    accent: "from-emerald-400 to-teal-300",
-    dot: "bg-emerald-400",
+    accent: "from-coral-400 to-coral-300",
+    dot: "bg-coral-400",
   },
   {
     week: "Week 3–4",
     title: "Design & Prototyping",
     body: "Wireframes → clickable prototype. It starts looking like a real product.",
-    accent: "from-teal-300 to-cyan-300",
-    dot: "bg-teal-300",
+    accent: "from-coral-400 to-cyan-400",
+    dot: "bg-cyan-400",
   },
   {
     week: "Week 5–6",
     title: "Full-Stack Development",
     body: "The actual build. No-code + AI tooling, guided 1:1 every single week.",
-    accent: "from-orange-400 to-amber-300",
-    dot: "bg-orange-400",
+    accent: "from-cyan-400 to-violet-400",
+    dot: "bg-violet-400",
   },
   {
     week: "Week 7–8",
     title: "Launch & Marketing",
     body: "Ship it. Product Hunt, press, first users, first rupees.",
-    accent: "from-violet-400 to-fuchsia-300",
-    dot: "bg-violet-400",
+    accent: "from-violet-400 to-fuchsia-400",
+    dot: "bg-fuchsia-400",
   },
 ];
 
@@ -97,7 +97,7 @@ export default function Journey() {
     <section
       ref={root}
       id="program"
-      className="relative overflow-hidden border-y border-white/5 bg-[#0c1220] lg:flex lg:h-[100svh] lg:flex-col lg:justify-center"
+      className="relative overflow-hidden border-y border-white/5 bg-[#0d2247] lg:flex lg:h-[100svh] lg:flex-col lg:justify-center"
     >
       <div className="container-x py-20 lg:py-0">
         <div className="text-center">
@@ -115,7 +115,7 @@ export default function Journey() {
 
         {/* progress rail */}
         <div className="mx-auto mt-10 hidden h-1.5 max-w-3xl overflow-hidden rounded-full bg-white/10 lg:block">
-          <div className="journey-progress-fill h-full origin-left scale-x-[0.12] rounded-full bg-gradient-to-r from-emerald-400 to-teal-300" />
+          <div className="journey-progress-fill h-full origin-left scale-x-[0.12] rounded-full bg-gradient-to-r from-coral-400 to-cyan-300" />
         </div>
 
         <div className="mt-10 grid gap-5 lg:mt-14 lg:grid-cols-4">
@@ -148,12 +148,12 @@ export default function Journey() {
           ))}
         </div>
 
-        <figure className="mx-auto mt-12 max-w-2xl rounded-2xl border-l-4 border-emerald-500 bg-white/[0.03] p-6 text-center">
+        <figure className="mx-auto mt-12 max-w-2xl rounded-2xl border-l-4 border-coral-500 bg-white/[0.03] p-6 text-center">
           <blockquote className="font-heading text-lg italic text-slate-200">
             “Learn to sell. Learn to build. If you can do both, you will be
             unstoppable.”
           </blockquote>
-          <figcaption className="mt-2 text-sm text-emerald-400">
+          <figcaption className="mt-2 text-sm text-coral-400">
             — Naval Ravikant
           </figcaption>
         </figure>
