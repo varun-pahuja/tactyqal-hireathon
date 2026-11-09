@@ -4,7 +4,7 @@
 
 A single Next.js application that replaces the old split (CodeIgniter homepage + separate WordPress blog) with one modern, deployable product: a redesigned marketing homepage, a REST API–driven blog, and an admin CMS.
 
-🌐 **Live demo:** _URL added after Vercel deploy_
+🌐 **Live demo:** https://tactyqal-hireathon.vercel.app  
 🎬 **Video walkthrough:** _link added after recording_
 
 ---
@@ -144,5 +144,6 @@ UX guardrails: WCAG AA contrast, `prefers-reduced-motion` respected globally, ke
 - [x] Blog backend — relational schema + CRUD REST APIs + validation + auth
 - [x] Blog frontend — index + article views served by our own API/DB (no WordPress)
 - [x] Admin interface — login, create, edit, publish/draft, delete
-- [x] GitHub repository — this repo
-- [ ] Live URL / video walkthrough — added post-deploy
+- [x] GitHub repository — https://github.com/varun-pahuja/tactyqal-hireathon
+- [x] Live URL — https://tactyqal-hireathon.vercel.app
+- [ ] Video walkthrough — added after recording
