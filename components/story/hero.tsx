@@ -39,8 +39,8 @@ export default function StoryHero() {
         <HeroWaves />
       </div>
 
-      {/* centered hero copy */}
-      <div className="relative z-10 flex w-full max-w-[750px] flex-col items-center text-center">
+      {/* centered hero copy on frosted glass */}
+      <div className="glass-panel relative z-10 flex w-full max-w-[720px] flex-col items-center rounded-[28px] px-6 py-10 text-center sm:px-12 sm:py-14">
         <h1 className="hero-line text-[clamp(2.25rem,6vw,4rem)] font-light leading-[1.15] tracking-[-0.03em] text-ink">
           Your kid has an idea.
           <br />
