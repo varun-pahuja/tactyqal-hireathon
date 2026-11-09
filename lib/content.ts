@@ -1,9 +1,9 @@
 export const navLinks = [
   { label: "Home", href: "#home" },
-  { label: "Success Stories", href: "#success" },
-  { label: "Program", href: "#program" },
+  { label: "The Journey", href: "#program" },
+  { label: "Shipped Apps", href: "#stories" },
+  { label: "Find Your Idea", href: "#quiz" },
   { label: "Why Us", href: "#why" },
-  { label: "Tools", href: "#tools" },
   { label: "Blog", href: "#blog" },
   { label: "Pricing", href: "#pricing" },
   { label: "FAQ", href: "#faq" },

@@ -1,7 +1,11 @@
 import Navbar from "@/components/navbar";
-import Hero from "@/components/sections/hero";
-import Stories from "@/components/sections/stories";
-import Program from "@/components/sections/program";
+import SmoothScroll from "@/components/story/smooth-scroll";
+import StoryHero from "@/components/story/hero";
+import IdeaBeat from "@/components/story/idea-beat";
+import Journey from "@/components/story/journey";
+import LaunchGallery from "@/components/story/launch-gallery";
+import RevenueTicker from "@/components/story/revenue";
+import Quiz from "@/components/story/quiz";
 import Why from "@/components/sections/why";
 import VideoSection from "@/components/sections/video";
 import Tools from "@/components/sections/tools";
@@ -14,13 +18,16 @@ import Footer from "@/components/sections/footer";
 
 export default function Home() {
   return (
-    <>
+    <SmoothScroll>
       <Navbar />
-      <main>
-        <Hero />
-        <Stories />
-        <Program />
+      <main id="home">
+        <StoryHero />
+        <IdeaBeat />
+        <Journey />
+        <LaunchGallery />
+        <RevenueTicker />
         <Why />
+        <Quiz />
         <VideoSection />
         <Tools />
         <Testimonials />
@@ -30,6 +37,6 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-    </>
+    </SmoothScroll>
   );
 }
