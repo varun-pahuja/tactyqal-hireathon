@@ -212,7 +212,7 @@ export default function AdminPage() {
   if (checking) {
     return (
       <main className="flex min-h-screen items-center justify-center">
-        <Loader2 className="h-6 w-6 animate-spin text-coral-400" aria-label="Loading" />
+        <Loader2 className="h-6 w-6 animate-spin text-sage-400" aria-label="Loading" />
       </main>
     );
   }
@@ -227,7 +227,7 @@ export default function AdminPage() {
           <h1 className="font-heading text-2xl font-bold">
             Tactyqal <span className="text-gradient">Admin</span>
           </h1>
-          <p className="mt-1 text-sm text-slate-400">Sign in to manage blog posts.</p>
+          <p className="mt-1 text-sm text-muted-grey">Sign in to manage blog posts.</p>
 
           <div className="mt-6 space-y-4">
             <div>
@@ -261,7 +261,7 @@ export default function AdminPage() {
           <Button
             type="submit"
             disabled={signingIn}
-            className="mt-6 w-full rounded-full bg-coral-500 font-semibold text-navy hover:bg-coral-400"
+            className="mt-6 w-full rounded-full bg-sage-500 font-semibold text-noir hover:bg-sage-400"
           >
             {signingIn ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
             Sign in
@@ -279,14 +279,14 @@ export default function AdminPage() {
             <h1 className="font-heading text-2xl font-bold sm:text-3xl">
               Blog <span className="text-gradient">Admin</span>
             </h1>
-            <p className="mt-1 text-sm text-slate-400">
+            <p className="mt-1 text-sm text-muted-grey">
               Signed in as {user.email}
             </p>
           </div>
           <div className="flex gap-2">
             <Button
               onClick={openCreate}
-              className="rounded-full bg-coral-500 font-semibold text-navy hover:bg-coral-400"
+              className="rounded-full bg-sage-500 font-semibold text-noir hover:bg-sage-400"
             >
               <Plus className="mr-1.5 h-4 w-4" aria-hidden /> New post
             </Button>
@@ -309,7 +309,7 @@ export default function AdminPage() {
         <div className="mt-6 overflow-x-auto rounded-2xl border border-white/10 bg-card">
           <table className="w-full text-left text-sm">
             <thead>
-              <tr className="border-b border-white/10 text-xs uppercase tracking-wider text-slate-500">
+              <tr className="border-b border-white/10 text-xs uppercase tracking-wider text-muted-grey/80">
                 <th className="px-4 py-3">Title</th>
                 <th className="px-4 py-3">Status</th>
                 <th className="px-4 py-3">Published</th>
@@ -319,14 +319,14 @@ export default function AdminPage() {
             <tbody>
               {loading && (
                 <tr>
-                  <td colSpan={4} className="px-4 py-8 text-center text-slate-500">
+                  <td colSpan={4} className="px-4 py-8 text-center text-muted-grey/80">
                     Loading…
                   </td>
                 </tr>
               )}
               {!loading && posts.length === 0 && (
                 <tr>
-                  <td colSpan={4} className="px-4 py-8 text-center text-slate-500">
+                  <td colSpan={4} className="px-4 py-8 text-center text-muted-grey/80">
                     No posts yet. Create your first one.
                   </td>
                 </tr>
@@ -334,21 +334,21 @@ export default function AdminPage() {
               {posts.map((p) => (
                 <tr key={p.id} className="border-b border-white/5 last:border-0">
                   <td className="px-4 py-3">
-                    <p className="font-medium text-slate-200">{p.title}</p>
-                    <p className="text-xs text-slate-500">/{p.slug}</p>
+                    <p className="font-medium text-cream">{p.title}</p>
+                    <p className="text-xs text-muted-grey/80">/{p.slug}</p>
                   </td>
                   <td className="px-4 py-3">
                     <Badge
                       className={
                         p.status === "published"
-                          ? "bg-coral-500/15 text-coral-300"
-                          : "bg-slate-500/20 text-slate-300"
+                          ? "bg-sage-500/15 text-sage-300"
+                          : "bg-sage-600/20 text-cream/85"
                       }
                     >
                       {p.status}
                     </Badge>
                   </td>
-                  <td className="px-4 py-3 text-slate-400">
+                  <td className="px-4 py-3 text-muted-grey">
                     {p.published_at
                       ? new Date(p.published_at).toLocaleDateString("en-GB")
                       : "—"}
@@ -383,7 +383,7 @@ export default function AdminPage() {
 
       {/* Create / edit dialog */}
       <Dialog open={editorOpen} onOpenChange={setEditorOpen}>
-        <DialogContent className="max-h-[90vh] overflow-y-auto border-white/10 bg-[#101828] sm:max-w-2xl">
+        <DialogContent className="max-h-[90vh] overflow-y-auto border-white/10 bg-[#1b1f1d] sm:max-w-2xl">
           <DialogHeader>
             <DialogTitle>{editing ? "Edit post" : "New post"}</DialogTitle>
             <DialogDescription>
@@ -507,7 +507,7 @@ export default function AdminPage() {
               <Button
                 type="submit"
                 disabled={saving}
-                className="rounded-full bg-coral-500 font-semibold text-navy hover:bg-coral-400"
+                className="rounded-full bg-sage-500 font-semibold text-noir hover:bg-sage-400"
               >
                 {saving && <Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden />}
                 {editing ? "Save changes" : "Create post"}
@@ -519,7 +519,7 @@ export default function AdminPage() {
 
       {/* Delete confirm */}
       <Dialog open={!!deleteTarget} onOpenChange={(o) => !o && setDeleteTarget(null)}>
-        <DialogContent className="border-white/10 bg-[#101828] sm:max-w-md">
+        <DialogContent className="border-white/10 bg-[#1b1f1d] sm:max-w-md">
           <DialogHeader>
             <DialogTitle>Delete post?</DialogTitle>
             <DialogDescription>

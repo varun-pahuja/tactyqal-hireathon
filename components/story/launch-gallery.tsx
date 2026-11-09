@@ -10,7 +10,7 @@ const launches = [
     tag: "Agriculture · India",
     revenue: "₹1,00,000",
     revLabel: "monthly revenue",
-    tone: "coral",
+    tone: "sage",
   },
   {
     name: "Aether",
@@ -18,7 +18,7 @@ const launches = [
     tag: "E-commerce · India",
     revenue: "₹9,000",
     revLabel: "first week revenue",
-    tone: "violet",
+    tone: "deep-sage",
   },
   {
     name: "EduSphere",
@@ -26,7 +26,7 @@ const launches = [
     tag: "EdTech · India",
     revenue: "15+",
     revLabel: "schools live",
-    tone: "peach",
+    tone: "sage-light",
   },
   {
     name: "ReWear",
@@ -34,7 +34,7 @@ const launches = [
     tag: "Sustainability · India",
     revenue: "₹2.5L",
     revLabel: "raised on grant",
-    tone: "cyan",
+    tone: "forest",
   },
   {
     name: "Mindspace",
@@ -42,7 +42,7 @@ const launches = [
     tag: "HealthTech · India",
     revenue: "1,000+",
     revLabel: "users in week 1",
-    tone: "fuchsia",
+    tone: "cream",
   },
   {
     name: "MedTrack",
@@ -50,17 +50,17 @@ const launches = [
     tag: "HealthTech · India",
     revenue: "500+",
     revLabel: "patients supported",
-    tone: "cyanlite",
+    tone: "sage-200",
   },
 ];
 
 const toneMap: Record<string, string> = {
-  coral: "border-coral-400/30 from-coral-400/20 to-transparent",
-  violet: "border-violet-400/30 from-violet-400/20 to-transparent",
-  peach: "border-coral-300/30 from-coral-300/20 to-transparent",
-  cyan: "border-cyan-400/30 from-cyan-400/20 to-transparent",
-  fuchsia: "border-fuchsia-400/30 from-fuchsia-400/20 to-transparent",
-  cyanlite: "border-cyan-300/30 from-cyan-300/20 to-transparent",
+  sage: "border-sage-400/30 from-sage-400/20 to-transparent",
+  "deep-sage": "border-sage-600/40 from-sage-600/25 to-transparent",
+  "sage-light": "border-sage-300/30 from-sage-300/20 to-transparent",
+  forest: "border-forest/70 from-forest/40 to-transparent",
+  cream: "border-cream/25 from-cream/10 to-transparent",
+  "sage-200": "border-sage-200/25 from-sage-200/15 to-transparent",
 };
 
 export default function LaunchGallery() {
@@ -98,13 +98,13 @@ export default function LaunchGallery() {
   return (
     <section ref={root} id="stories" className="relative overflow-hidden lg:h-[100svh]">
       <div className="container-x pt-20 lg:pt-28">
-        <p className="text-sm font-medium uppercase tracking-[0.3em] text-slate-500">
+        <p className="text-sm font-medium uppercase tracking-[0.3em] text-muted-grey/80">
           Chapter 03
         </p>
         <h2 className="mt-4 font-heading text-[clamp(2rem,5vw,3.5rem)] font-extrabold tracking-tight">
           The apps they <span className="text-gradient">shipped</span>
         </h2>
-        <p className="mt-3 max-w-xl text-slate-400">
+        <p className="mt-3 max-w-xl text-muted-grey">
           Real students. Real products. Real rupees — not certificates.
         </p>
       </div>
@@ -125,18 +125,18 @@ export default function LaunchGallery() {
                 <span className="text-5xl opacity-25" aria-hidden>
                   {s.name.slice(0, 1)}
                 </span>
-                <span className="mt-3 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-slate-300 w-fit">
+                <span className="mt-3 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-cream/85 w-fit">
                   {s.tag}
                 </span>
               </div>
-              <p className="mt-5 font-heading text-xl font-bold text-slate-100">
+              <p className="mt-5 font-heading text-xl font-bold text-cream">
                 {s.line}
               </p>
               <div className="mt-5 flex items-baseline gap-2 border-t border-white/10 pt-4">
-                <strong className="font-heading text-3xl font-extrabold text-coral-400">
+                <strong className="font-heading text-3xl font-extrabold text-sage-400">
                   {s.revenue}
                 </strong>
-                <span className="text-xs uppercase tracking-wider text-slate-500">
+                <span className="text-xs uppercase tracking-wider text-muted-grey/80">
                   {s.revLabel}
                 </span>
               </div>
@@ -144,7 +144,7 @@ export default function LaunchGallery() {
           ))}
         </div>
       </div>
-      <div className="container-x pb-16 pt-4 text-center text-xs uppercase tracking-[0.2em] text-slate-600 lg:pb-20">
+      <div className="container-x pb-16 pt-4 text-center text-xs uppercase tracking-[0.2em] text-muted-grey/60 lg:pb-20">
         Keep scrolling →
       </div>
     </section>

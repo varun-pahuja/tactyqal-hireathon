@@ -30,7 +30,7 @@ export default function Navbar() {
       }`}
     >
       <div
-        className="absolute inset-x-0 bottom-0 h-0.5 origin-left bg-gradient-to-r from-coral-500 via-coral-400 to-cyan-400"
+        className="absolute inset-x-0 bottom-0 h-0.5 origin-left bg-gradient-to-r from-sage-500 via-sage-400 to-sage-300"
         style={{ transform: `scaleX(${progress})` }}
         aria-hidden
       />
@@ -44,7 +44,7 @@ export default function Navbar() {
             <a
               key={l.href}
               href={l.href}
-              className="rounded-full px-3 py-2 text-sm font-medium text-slate-200 transition-colors hover:bg-white/5 hover:text-coral-300 focus-visible:outline-2 focus-visible:outline-coral-400"
+              className="rounded-full px-3 py-2 text-sm font-medium text-cream transition-colors hover:bg-white/5 hover:text-sage-300 focus-visible:outline-2 focus-visible:outline-sage-400"
             >
               {l.label}
             </a>
@@ -54,7 +54,7 @@ export default function Navbar() {
         <div className="flex items-center gap-2">
           <Button
             asChild
-            className="hidden rounded-full bg-coral-500 font-semibold text-navy hover:bg-coral-400 md:inline-flex"
+            className="hidden rounded-full bg-sage-500 font-semibold text-noir hover:bg-sage-400 md:inline-flex"
           >
             <a href="#contact">Contact</a>
           </Button>
@@ -64,7 +64,7 @@ export default function Navbar() {
               <span className="sr-only">Open menu</span>
               <Menu className="h-5 w-5" aria-hidden />
             </SheetTrigger>
-            <SheetContent side="right" className="w-72 border-white/10 bg-[#0a1c3d]">
+            <SheetContent side="right" className="w-72 border-white/10 bg-[#141515]">
               <SheetTitle className="font-heading text-lg font-bold">
                 Tactyqal <span className="text-gradient">Labs</span>
               </SheetTitle>
@@ -74,7 +74,7 @@ export default function Navbar() {
                     key={l.href}
                     href={l.href}
                     onClick={() => setOpen(false)}
-                    className="rounded-lg px-3 py-3 text-base font-medium text-slate-200 transition-colors hover:bg-white/5 hover:text-coral-300"
+                    className="rounded-lg px-3 py-3 text-base font-medium text-cream transition-colors hover:bg-white/5 hover:text-sage-300"
                   >
                     {l.label}
                   </a>
@@ -82,7 +82,7 @@ export default function Navbar() {
                 <a
                   href="#contact"
                   onClick={() => setOpen(false)}
-                  className="mt-3 rounded-full bg-coral-500 px-4 py-3 text-center font-semibold text-navy"
+                  className="mt-3 rounded-full bg-sage-500 px-4 py-3 text-center font-semibold text-noir"
                 >
                   Contact
                 </a>

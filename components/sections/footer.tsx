@@ -10,14 +10,14 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-[#080d18]">
+    <footer className="border-t border-white/10 bg-[#0f1110]">
       <div className="container-x py-12 md:py-16">
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <Link href="#home" className="font-heading text-xl font-bold">
               Tactyqal <span className="text-gradient">Labs</span>
             </Link>
-            <p className="mt-3 max-w-sm text-sm leading-relaxed text-slate-400">
+            <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted-grey">
               Mentoring aspiring entrepreneurs and young builders to turn ideas
               into real-world applications — from ideation to launch in 8 weeks.
             </p>
@@ -26,7 +26,7 @@ export default function Footer() {
                 <a
                   key={s.label}
                   href={s.href}
-                  className="rounded-full border border-white/10 px-3 py-1.5 text-xs font-medium text-slate-400 transition-colors hover:border-coral-400/50 hover:text-coral-400"
+                  className="rounded-full border border-white/10 px-3 py-1.5 text-xs font-medium text-muted-grey transition-colors hover:border-sage-400/50 hover:text-sage-400"
                 >
                   {s.label}
                 </a>
@@ -35,7 +35,7 @@ export default function Footer() {
           </div>
 
           <nav aria-label="Footer">
-            <h3 className="font-heading text-sm font-bold uppercase tracking-wider text-slate-300">
+            <h3 className="font-heading text-sm font-bold uppercase tracking-wider text-cream/85">
               Explore
             </h3>
             <ul className="mt-4 space-y-2.5">
@@ -43,7 +43,7 @@ export default function Footer() {
                 <li key={l.href}>
                   <a
                     href={l.href}
-                    className="text-sm text-slate-400 transition-colors hover:text-coral-400"
+                    className="text-sm text-muted-grey transition-colors hover:text-sage-400"
                   >
                     {l.label}
                   </a>
@@ -53,14 +53,14 @@ export default function Footer() {
           </nav>
 
           <div>
-            <h3 className="font-heading text-sm font-bold uppercase tracking-wider text-slate-300">
+            <h3 className="font-heading text-sm font-bold uppercase tracking-wider text-cream/85">
               Contact
             </h3>
-            <ul className="mt-4 space-y-3 text-sm text-slate-400">
+            <ul className="mt-4 space-y-3 text-sm text-muted-grey">
               <li>
                 <a
                   href={`mailto:${contact.email}`}
-                  className="flex items-center gap-2 transition-colors hover:text-coral-400"
+                  className="flex items-center gap-2 transition-colors hover:text-sage-400"
                 >
                   <Mail className="h-4 w-4 shrink-0" aria-hidden />
                   <span className="break-all">{contact.email}</span>
@@ -69,22 +69,22 @@ export default function Footer() {
               <li>
                 <a
                   href={`tel:${contact.phone.replace(/[^+\d]/g, "")}`}
-                  className="flex items-center gap-2 transition-colors hover:text-coral-400"
+                  className="flex items-center gap-2 transition-colors hover:text-sage-400"
                 >
                   <Phone className="h-4 w-4 shrink-0" aria-hidden />
                   {contact.phone}
                 </a>
               </li>
-              <li className="text-slate-500">{contact.hours}</li>
+              <li className="text-muted-grey/80">{contact.hours}</li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-white/5 pt-6 text-xs text-slate-500 sm:flex-row">
+        <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-white/5 pt-6 text-xs text-muted-grey/80 sm:flex-row">
           <p>© 2026 Tactyqal Labs. All rights reserved.</p>
           <p>
             Built for the Tactyqal Labs hire-a-thon ·{" "}
-            <Link href="/admin" className="hover:text-coral-400">
+            <Link href="/admin" className="hover:text-sage-400">
               Admin
             </Link>
           </p>

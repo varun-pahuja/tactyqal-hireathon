@@ -127,21 +127,21 @@ export default function Quiz() {
   return (
     <section
       id="quiz"
-      className="relative overflow-hidden border-y border-white/5 bg-[#0d2247] py-20 sm:py-28"
+      className="relative overflow-hidden border-y border-white/5 bg-[#171b19] py-20 sm:py-28"
     >
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_55%_at_50%_0%,rgba(255,107,107,0.16),transparent_65%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_55%_at_50%_0%,rgba(155,202,166,0.16),transparent_65%)]"
         aria-hidden
       />
       <div className="container-x relative max-w-3xl text-center">
-        <span className="inline-flex items-center gap-2 rounded-full border border-coral-400/30 bg-coral-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-coral-300">
+        <span className="inline-flex items-center gap-2 rounded-full border border-sage-400/30 bg-sage-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-sage-300">
           <Sparkles className="h-3.5 w-3.5" aria-hidden />
           Interactive · 30 seconds
         </span>
         <h2 className="mt-5 font-heading text-[clamp(1.9rem,4.5vw,3.2rem)] font-extrabold tracking-tight">
           What app should your kid <span className="text-gradient">build</span>?
         </h2>
-        <p className="mt-3 text-slate-400">
+        <p className="mt-3 text-muted-grey">
           Four questions. One idea worth an 8-week sprint.
         </p>
 
@@ -150,20 +150,20 @@ export default function Quiz() {
           aria-live="polite"
         >
           {/* progress */}
-          <div className="flex items-center justify-between text-xs font-medium uppercase tracking-wider text-slate-500">
+          <div className="flex items-center justify-between text-xs font-medium uppercase tracking-wider text-muted-grey/80">
             <span>{result ? "Your idea" : QUESTIONS[step].hint}</span>
             <span>{Math.round(progress * 100)}%</span>
           </div>
           <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-white/10">
             <div
-              className="h-full rounded-full bg-gradient-to-r from-coral-400 to-cyan-300 transition-[width] duration-500"
+              className="h-full rounded-full bg-gradient-to-r from-sage-400 to-sage-200 transition-[width] duration-500"
               style={{ width: `${Math.max(progress * 100, 8)}%` }}
             />
           </div>
 
           {!result && (
             <>
-              <h3 className="mt-6 font-heading text-xl font-bold text-slate-100 sm:text-2xl">
+              <h3 className="mt-6 font-heading text-xl font-bold text-cream sm:text-2xl">
                 {QUESTIONS[step].q}
               </h3>
               <div className="mt-5 grid gap-3">
@@ -171,7 +171,7 @@ export default function Quiz() {
                   <button
                     key={a.label}
                     onClick={() => answer(a.kind)}
-                    className="group flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4 text-left font-medium text-slate-200 transition hover:border-coral-400/50 hover:bg-coral-500/10 hover:text-coral-200 focus-visible:outline-2 focus-visible:outline-coral-400"
+                    className="group flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4 text-left font-medium text-cream transition hover:border-sage-400/50 hover:bg-sage-500/10 hover:text-sage-200 focus-visible:outline-2 focus-visible:outline-sage-400"
                   >
                     {a.label}
                     <Check
@@ -184,7 +184,7 @@ export default function Quiz() {
               {step > 0 && (
                 <button
                   onClick={() => setStep(step - 1)}
-                  className="mt-4 text-xs font-medium text-slate-500 underline-offset-4 hover:text-slate-300 hover:underline"
+                  className="mt-4 text-xs font-medium text-muted-grey/80 underline-offset-4 hover:text-cream/85 hover:underline"
                 >
                   ← Previous question
                 </button>
@@ -197,29 +197,29 @@ export default function Quiz() {
               <span className="text-5xl" aria-hidden>
                 {result.emoji}
               </span>
-              <h3 className="mt-4 font-heading text-2xl font-extrabold text-coral-300 sm:text-3xl">
+              <h3 className="mt-4 font-heading text-2xl font-extrabold text-sage-300 sm:text-3xl">
                 {result.title}
               </h3>
-              <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-slate-300 sm:text-base">
+              <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-cream/85 sm:text-base">
                 {result.blurb}
               </p>
               <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
                 <a
                   href="#contact"
-                  className="inline-flex h-12 items-center rounded-full bg-coral-500 px-8 font-semibold text-navy transition hover:bg-coral-400"
+                  className="inline-flex h-12 items-center rounded-full bg-sage-500 px-8 font-semibold text-noir transition hover:bg-sage-400"
                 >
                   <Compass className="mr-2 h-4 w-4" aria-hidden />
                   Book a free 15-min call
                 </a>
                 <button
                   onClick={restart}
-                  className="inline-flex h-12 items-center rounded-full border border-white/15 px-7 font-medium text-slate-300 transition hover:bg-white/5"
+                  className="inline-flex h-12 items-center rounded-full border border-white/15 px-7 font-medium text-cream/85 transition hover:bg-white/5"
                 >
                   <RotateCcw className="mr-2 h-4 w-4" aria-hidden />
                   Try again
                 </button>
               </div>
-              <p className="mt-5 text-xs text-slate-500">
+              <p className="mt-5 text-xs text-muted-grey/80">
                 15 spots this month · ₹16,000 (was ₹25,000) · results guaranteed
               </p>
             </div>

@@ -8,29 +8,29 @@ const weeks = [
     week: "Week 1–2",
     title: "Ideation & Market Research",
     body: "Find the idea worth building. Talk to real users. Kill the weak ones fast.",
-    accent: "from-coral-400 to-coral-300",
-    dot: "bg-coral-400",
+    accent: "from-sage-300 to-sage-500",
+    dot: "bg-sage-400",
   },
   {
     week: "Week 3–4",
     title: "Design & Prototyping",
     body: "Wireframes → clickable prototype. It starts looking like a real product.",
-    accent: "from-coral-400 to-cyan-400",
-    dot: "bg-cyan-400",
+    accent: "from-sage-300 to-sage-500",
+    dot: "bg-sage-300",
   },
   {
     week: "Week 5–6",
     title: "Full-Stack Development",
     body: "The actual build. No-code + AI tooling, guided 1:1 every single week.",
-    accent: "from-cyan-400 to-violet-400",
-    dot: "bg-violet-400",
+    accent: "from-sage-600 to-sage-300",
+    dot: "bg-sage-600",
   },
   {
     week: "Week 7–8",
     title: "Launch & Marketing",
     body: "Ship it. Product Hunt, press, first users, first rupees.",
-    accent: "from-violet-400 to-fuchsia-400",
-    dot: "bg-fuchsia-400",
+    accent: "from-cream to-sage-300",
+    dot: "bg-cream",
   },
 ];
 
@@ -97,25 +97,25 @@ export default function Journey() {
     <section
       ref={root}
       id="program"
-      className="relative overflow-hidden border-y border-white/5 bg-[#0d2247] lg:flex lg:h-[100svh] lg:flex-col lg:justify-center"
+      className="relative overflow-hidden border-y border-white/5 bg-[#171b19] lg:flex lg:h-[100svh] lg:flex-col lg:justify-center"
     >
       <div className="container-x py-20 lg:py-0">
         <div className="text-center">
-          <p className="text-sm font-medium uppercase tracking-[0.3em] text-slate-500">
+          <p className="text-sm font-medium uppercase tracking-[0.3em] text-muted-grey/80">
             Chapter 02
           </p>
           <h2 className="mt-4 font-heading text-[clamp(2rem,5vw,3.5rem)] font-extrabold tracking-tight">
             From <span className="text-gradient">crazy idea</span> to launched
             app
           </h2>
-          <p className="mt-3 text-slate-400">
+          <p className="mt-3 text-muted-grey">
             One continuous 8-week journey. 1:1 live sessions. Real shipping.
           </p>
         </div>
 
         {/* progress rail */}
         <div className="mx-auto mt-10 hidden h-1.5 max-w-3xl overflow-hidden rounded-full bg-white/10 lg:block">
-          <div className="journey-progress-fill h-full origin-left scale-x-[0.12] rounded-full bg-gradient-to-r from-coral-400 to-cyan-300" />
+          <div className="journey-progress-fill h-full origin-left scale-x-[0.12] rounded-full bg-gradient-to-r from-sage-400 to-sage-200" />
         </div>
 
         <div className="mt-10 grid gap-5 lg:mt-14 lg:grid-cols-4">
@@ -135,10 +135,10 @@ export default function Journey() {
               >
                 {w.week}
               </p>
-              <h3 className="mt-3 font-heading text-lg font-bold text-slate-100">
+              <h3 className="mt-3 font-heading text-lg font-bold text-cream">
                 {w.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-400">
+              <p className="mt-2 text-sm leading-relaxed text-muted-grey">
                 {w.body}
               </p>
               <span className="mt-5 block font-heading text-3xl font-extrabold text-white/5">
@@ -148,12 +148,12 @@ export default function Journey() {
           ))}
         </div>
 
-        <figure className="mx-auto mt-12 max-w-2xl rounded-2xl border-l-4 border-coral-500 bg-white/[0.03] p-6 text-center">
-          <blockquote className="font-heading text-lg italic text-slate-200">
+        <figure className="mx-auto mt-12 max-w-2xl rounded-2xl border-l-4 border-sage-500 bg-white/[0.03] p-6 text-center">
+          <blockquote className="font-heading text-lg italic text-cream">
             “Learn to sell. Learn to build. If you can do both, you will be
             unstoppable.”
           </blockquote>
-          <figcaption className="mt-2 text-sm text-coral-400">
+          <figcaption className="mt-2 text-sm text-sage-400">
             — Naval Ravikant
           </figcaption>
         </figure>

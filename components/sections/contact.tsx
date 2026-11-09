@@ -15,9 +15,9 @@ export default function Contact() {
 
         <div className="mt-12 grid items-stretch gap-6 lg:grid-cols-2">
           <Reveal>
-            <div className="h-full rounded-3xl bg-gradient-to-br from-coral-400 via-coral-500 to-cyan-600 p-8 text-white sm:p-10">
+            <div className="h-full rounded-3xl bg-gradient-to-br from-sage-400 via-sage-500 to-sage-700 p-8 text-white sm:p-10">
               <h3 className="font-heading text-2xl font-bold">Contact Us</h3>
-              <p className="mt-2 text-sm text-coral-50/90">
+              <p className="mt-2 text-sm text-sage-50/90">
                 Reach out to our dedicated team for any inquiries, assistance,
                 or information you need.
               </p>
@@ -63,10 +63,10 @@ export default function Contact() {
 
           <Reveal delay={100}>
             <div className="flex h-full flex-col rounded-3xl border border-white/10 bg-card p-8 sm:p-10">
-              <h3 className="font-heading text-center text-xl font-bold text-coral-400">
+              <h3 className="font-heading text-center text-xl font-bold text-sage-400">
                 Book a Free Appointment
               </h3>
-              <p className="mt-2 text-center text-sm text-slate-400">
+              <p className="mt-2 text-center text-sm text-muted-grey">
                 Get on a 15-minute call to understand how we&apos;ll help you
                 over the next 8 weeks.
               </p>
@@ -78,11 +78,11 @@ export default function Contact() {
                   loading="lazy"
                 />
               </div>
-              <p className="mt-4 text-center text-xs text-slate-500">
+              <p className="mt-4 text-center text-xs text-muted-grey/80">
                 Prefer email?{" "}
                 <a
                   href={`mailto:${contact.email}`}
-                  className="text-coral-400 hover:underline"
+                  className="text-sage-400 hover:underline"
                 >
                   {contact.email}
                 </a>

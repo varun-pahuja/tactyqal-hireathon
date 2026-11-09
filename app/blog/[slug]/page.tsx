@@ -43,13 +43,13 @@ export default async function BlogPost({ params }: Props) {
     <main className="pt-24 md:pt-28">
       <article className="section-pad">
         <div className="container-x max-w-3xl">
-          <Link href="/blog" className="text-sm text-coral-400 hover:underline">
+          <Link href="/blog" className="text-sm text-sage-400 hover:underline">
             ← All articles
           </Link>
 
-          <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-slate-400">
+          <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-muted-grey">
             {category && (
-              <span className="rounded-full bg-coral-500/15 px-3 py-1 text-xs font-semibold text-coral-300">
+              <span className="rounded-full bg-sage-500/15 px-3 py-1 text-xs font-semibold text-sage-300">
                 {category.name}
               </span>
             )}
@@ -70,7 +70,7 @@ export default async function BlogPost({ params }: Props) {
           </h1>
 
           {author && (
-            <p className="mt-4 text-sm text-slate-400">By {author.name}</p>
+            <p className="mt-4 text-sm text-muted-grey">By {author.name}</p>
           )}
 
           {post.cover_image && (
@@ -93,7 +93,7 @@ export default async function BlogPost({ params }: Props) {
           <hr className="my-10 border-white/10" />
           <Link
             href="/blog"
-            className="inline-flex h-11 items-center rounded-full bg-coral-500 px-6 font-semibold text-navy transition hover:bg-coral-400"
+            className="inline-flex h-11 items-center rounded-full bg-sage-500 px-6 font-semibold text-noir transition hover:bg-sage-400"
           >
             More articles
           </Link>

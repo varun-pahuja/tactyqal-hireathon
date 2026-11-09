@@ -46,25 +46,25 @@ export default function IdeaBeat() {
       className="relative flex min-h-[160vh] flex-col items-center justify-start overflow-hidden"
     >
       <div className="sticky top-0 flex h-[100svh] w-full flex-col items-center justify-center px-4 text-center">
-        <p className="text-sm font-medium uppercase tracking-[0.3em] text-slate-500">
+        <p className="text-sm font-medium uppercase tracking-[0.3em] text-muted-grey/80">
           Chapter 01
         </p>
         <div className="mt-6 flex flex-wrap items-baseline justify-center gap-x-6 gap-y-2">
           {WORDS.map((w) => (
             <span
               key={w}
-              className="shatter-word font-heading text-[clamp(3rem,12vw,9rem)] font-extrabold leading-none tracking-tight text-slate-100 will-change-transform"
+              className="shatter-word font-heading text-[clamp(3rem,12vw,9rem)] font-extrabold leading-none tracking-tight text-cream will-change-transform"
             >
               {w}
             </span>
           ))}
         </div>
         <div className="beat-after absolute inset-x-0 bottom-[12vh] px-4">
-          <p className="mx-auto max-w-2xl font-heading text-xl text-slate-300 sm:text-2xl">
+          <p className="mx-auto max-w-2xl font-heading text-xl text-cream/85 sm:text-2xl">
             …but <span className="text-red-400">9 out of 10</span> die before
             anyone ever sees them.
           </p>
-          <p className="mx-auto mt-3 max-w-xl text-sm text-slate-500 sm:text-base">
+          <p className="mx-auto mt-3 max-w-xl text-sm text-muted-grey/80 sm:text-base">
             No team. No budget. No clue where to start. That&apos;s where we
             come in.
           </p>
