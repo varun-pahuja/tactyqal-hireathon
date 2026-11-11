@@ -26,13 +26,13 @@ A single Next.js application that replaces the old split (CodeIgniter homepage +
 ```
 tactyqal-hireathon/
 ├── app/
-│   ├── page.tsx                # Task 1: homepage (13 sections)
+│   ├── page.tsx                # Task 1: homepage (14 sections)
 │   ├── blog/page.tsx           # Blog index
 │   ├── blog/[slug]/page.tsx    # Article view (markdown)
 │   ├── admin/page.tsx          # CMS: Supabase Auth + CRUD UI
 │   └── api/posts/route.ts      # GET list · POST create
 │       └── [id]/route.ts       # GET · PUT · DELETE
-├── components/                 # navbar, reveal, count-up, sections/
+├── components/                 # navbar · story/ (chapters, scroll) · sections/ · ui/
 ├── lib/
 │   ├── content.ts              # homepage copy/data
 │   ├── types.ts                # Post types
@@ -130,11 +130,20 @@ npm run lint
 
 The redesign keeps Tactyqal's brand (near-black navy + emerald) and levels it up with:
 
-- **godly.website / recent.design** — dark editorial rhythm, oversized display type, one idea per screen
-- **21st.dev** — component patterns (bento feature grids, single pricing card, testimonial cards, marquee stats)
-- **reactbits.dev** — motion vocabulary: staggered word-reveal hero, scroll reveals, count-up stats, spotlight cards (implemented as lightweight CSS/IntersectionObserver equivalents to keep JS small)
-- **Pinterest / Instagram** — avatar-led testimonials, screenshot-first showcase grid
+- **godly.website** — dark editorial rhythm, oversized display type, one idea per screen
+- **21st.dev** — the Bento Grid pattern (*"hover items and shadow"*, by Manu Arora and kokonutd — the two most-cloned versions on the registry) adapted for the *"apps they shipped"* gallery, plus the single pricing card, testimonial cards and marquee stats. The 21st.dev registry is login-gated (`403 authentication_required`), so the components were rebuilt in-house against the same pattern.
+- **GSAP ScrollTrigger + Lenis** — pinned horizontal journey chapter (scrubbed across its track, with a velocity skew that settles back to zero) and scroll reveals throughout
 - **shadcn/ui** — accordion, sheet (mobile nav), dialog, table primitives throughout
+
+> The reference links in the brief (`sensory-overload.vip`, `product.soulo.ai`, `110.soulo.ai`) did not resolve at review time (NXDOMAIN) and `deathtobullshit.com` was a static two-screen page with no scroll technique to borrow — so direction came from the live sources above instead.
+
+### Homepage narrative (14 sections)
+
+1. **Hero** — fully static, server-rendered headline over generated emerald line-art. Zero JS animation, so no flicker, no layout shift, and the H1 ships in the first HTML byte.
+2. **Chapter 01 — the idea beat**
+3. **Chapter 02 — the 8 weeks** — pinned horizontal scrub; 5 panels travel sideways as you scroll, with a velocity skew that settles to zero when you stop.
+4. **Chapter 03 — the apps they shipped** — bento showcase: one flagship cell dominant, stat cells for the proof numbers, hover lift + emerald glow.
+5. Why · stats · quiz · video · tools · testimonials marquee · blog preview · pricing · FAQ · contact — responsive throughout, with a plain-grid fallback under `prefers-reduced-motion`.
 
 UX guardrails: WCAG AA contrast, `prefers-reduced-motion` respected globally, keyboard-operable nav/accordion/dialogs, 44px touch targets, skeleton/empty/error states on async content, click-to-load video facade protecting LCP, `next/image` with reserved aspect ratios (no CLS).
 

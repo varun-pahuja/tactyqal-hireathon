@@ -81,7 +81,7 @@ function ClientFeedback() {
 
   return (
     <section
-      className="relative w-full bg-[#0a0a0a] py-14"
+      className="relative w-full overflow-hidden bg-[#0a0a0a] py-14"
       ref={testimonialRef}
     >
       <article className="mx-auto max-w-screen-md space-y-2 px-4 text-center">
