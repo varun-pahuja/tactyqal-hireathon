@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <header className="fixed left-1/2 top-[30px] z-50 w-max max-w-[calc(100vw-24px)] -translate-x-1/2">
       <nav
-        className="glass flex h-[52px] items-center gap-0.5 rounded-full px-2.5 py-2"
+        className="flex h-[52px] items-center gap-0.5 rounded-full border border-white/[0.06] bg-[#171717]/95 px-2.5 py-2 backdrop-blur-md"
         aria-label="Primary"
       >
         <Link
