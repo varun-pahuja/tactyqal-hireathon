@@ -92,7 +92,7 @@ export default function LaunchGallery() {
   }, []);
 
   return (
-    <section ref={root} id="stories" className="section-pad relative border-y border-white/5 bg-[#0a0a0a]">
+    <section ref={root} id="stories" className="section-pad pt-24 relative border-y border-white/5 bg-[#0a0a0a]">
       <div className="container-x">
         <div className="max-w-2xl">
           <p className="text-sm font-medium uppercase tracking-[0.3em] text-dim/80">
@@ -106,7 +106,7 @@ export default function LaunchGallery() {
           </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-2 gap-4 lg:mt-14 lg:grid-cols-4 lg:auto-rows-[14rem] lg:gap-5">
+        <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-1 lg:mt-14 lg:gap-5">
           {launches.map((s) => (
             <article
               key={s.name}
@@ -119,7 +119,7 @@ export default function LaunchGallery() {
               {s.stat ? (
                 <>
                   <span
-                    className="pointer-events-none absolute right-5 top-4 text-7xl leading-none font-black text-white/5 select-none"
+                    className="pointer-events-none absolute right-5 top-2 sm:text-5xl text-7xl leading-none font-black text-white/5 select-none"
                     aria-hidden
                   >
                     {s.name.slice(0, 1)}
@@ -146,7 +146,7 @@ export default function LaunchGallery() {
                       {s.tag}
                     </span>
                     <span
-                      className={`${s.span.includes("row-span-2") ? "text-8xl" : "text-5xl"} leading-none font-black text-white/10 select-none`}
+                      className={`${s.span.includes("row-span-2") ? "text-8xl" : "text-5xl"} leading-none font-black text-white/10 select-none sm:text-3xl top-2`}
                       aria-hidden
                     >
                       {s.name.slice(0, 1)}
