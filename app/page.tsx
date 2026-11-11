@@ -7,9 +7,10 @@ import LaunchGallery from "@/components/story/launch-gallery";
 import RevenueTicker from "@/components/story/revenue";
 import Quiz from "@/components/story/quiz";
 import Why from "@/components/sections/why";
+import Stats from "@/components/ui/stats-06";
 import VideoSection from "@/components/sections/video";
 import Tools from "@/components/sections/tools";
-import Testimonials from "@/components/sections/testimonials";
+import Testimonials from "@/components/ui/testimonial";
 import BlogPreview from "@/components/sections/blog-preview";
 import Pricing from "@/components/sections/pricing";
 import Faq from "@/components/sections/faq";
@@ -27,6 +28,7 @@ export default function Home() {
         <LaunchGallery />
         <RevenueTicker />
         <Why />
+        <Stats />
         <Quiz />
         <VideoSection />
         <Tools />
