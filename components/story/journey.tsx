@@ -122,7 +122,7 @@ export default function Journey() {
     <section
       ref={root}
       id="program"
-      className="relative overflow-hidden border-y border-white/5 bg-[#0a0a0a] lg:flex lg:h-[100svh] lg:flex-col lg:justify-center"
+      className="relative overflow-hidden border-y border-white/5 bg-[#0a0a0a] lg:flex lg:flex-col lg:justify-center"
     >
       <div className="container-x py-20 lg:py-0">
         <div className="text-center">

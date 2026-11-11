@@ -43,9 +43,9 @@ export default function IdeaBeat() {
   return (
     <section
       ref={root}
-      className="relative flex min-h-[160vh] flex-col items-center justify-start overflow-hidden"
+      className="relative flex min-h-[80vh] flex-col items-center justify-start overflow-hidden"
     >
-      <div className="sticky top-0 flex h-[100svh] w-full flex-col items-center justify-center px-4 text-center">
+      <div className="sticky top-0 min-h-[80vh] w-full flex-col items-center justify-center px-4 text-center">
         <p className="text-sm font-medium uppercase tracking-[0.3em] text-dim/80">
           Chapter 01
         </p>

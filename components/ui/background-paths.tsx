@@ -43,7 +43,7 @@ export function BackgroundPaths({
   children?: ReactNode;
 }) {
   return (
-    <div className="relative flex min-h-[100svh] w-full items-center justify-center overflow-hidden bg-[#030303] py-32">
+    <div className="relative flex min-h-[100svh] w-full items-center justify-center overflow-hidden bg-[#030303] py-16">
       <div className="absolute inset-0" aria-hidden>
         <FloatingPaths position={1} />
         <FloatingPaths position={-1} />
