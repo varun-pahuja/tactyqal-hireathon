@@ -74,7 +74,7 @@ export default function Contact() {
                 <iframe
                   title="Book a 15-Minute Call with Tactyqal Labs"
                   src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3JlaCrNitoPs8Bdr-FUP0cRfFI-MopSIH2azaPNDpRk56h6drYLbXSh-mDc9sfEZAQUKGdsUXs?gv=true"
-                  className="h-full min-h-[420px] w-full"
+                  className="h-full w-full"
                   loading="lazy"
                 />
               </div>

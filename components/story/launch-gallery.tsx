@@ -110,7 +110,7 @@ export default function LaunchGallery() {
           {launches.map((s) => (
             <article
               key={s.name}
-              className={`bento-cell group relative flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:shadow-[0_24px_60px_-24px_rgba(0,169,130,0.4)] lg:p-7 ${s.span}`}
+              className={`bento-cell group relative flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:shadow-[0_24px_60px_-24px_rgba(0,169,130,0.4)] lg:p-7 min-w-0 ${s.span}`}
             >
               <div
                 className={`pointer-events-none absolute inset-0 bg-gradient-to-b opacity-0 transition-opacity duration-300 group-hover:opacity-100 ${s.tone}`}
