@@ -4,7 +4,6 @@ import StoryHero from "@/components/story/hero";
 import IdeaBeat from "@/components/story/idea-beat";
 import Journey from "@/components/story/journey";
 import LaunchGallery from "@/components/story/launch-gallery";
-import RevenueTicker from "@/components/story/revenue";
 import Quiz from "@/components/story/quiz";
 import Why from "@/components/sections/why";
 import Stats from "@/components/ui/stats-06";
@@ -26,7 +25,6 @@ export default function Home() {
         <IdeaBeat />
         <Journey />
         <LaunchGallery />
-        <RevenueTicker />
         <Why />
         <Stats />
         <Quiz />
