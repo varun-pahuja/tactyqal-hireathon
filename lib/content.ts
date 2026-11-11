@@ -83,43 +83,43 @@ export const features = [
   {
     title: "1:1 Personalized Mentoring",
     description:
-      "Every student gets dedicated, expert guidance. No group classes.",
+      "Every child receives dedicated, expert guidance tailored to their pace, with no large group classes.",
     icon: "graduation",
   },
   {
     title: "Full Stack App with No-Code",
-    description: "Build real apps using modern no-code tools and platforms.",
+    description: "Build real apps using modern no‑code tools, giving your child a creative outlet that feels like real engineering.",
     icon: "code",
   },
   {
     title: "Proven Track Record",
-    description: "50+ successful students, real revenue, and top university admits.",
+    description: "50+ students have shipped working apps, earned university admission, and built revenue‑generating projects — proof the program delivers.",
     icon: "trophy",
   },
   {
     title: "University Admission Edge",
     description:
-      "Stand out in applications with real-world projects and achievements.",
+      "Stand out in applications with a tangible, published app and measurable skills that admissions officers value.",
     icon: "bank",
   },
   {
     title: "Revenue Generation",
-    description: "Students learn to build, launch, and monetize their own apps.",
+    description: "Students learn to launch and monetize their own apps, giving your child early experience with entrepreneurship and financial literacy.",
     icon: "chart",
   },
   {
     title: "Life Long Support",
-    description: "From ideation to launch, students master the full journey.",
+    description: "From ideation to launch, your child masters a clear, supported journey from idea to published product.",
     icon: "heart",
   },
   {
     title: "Pitch & Presentation Skills",
-    description: "Learn to pitch, present, and launch on Product Hunt.",
+    description: "Help your child learn to pitch, present, and launch a project — building confidence and communication skills.",
     icon: "mic",
   },
   {
     title: "Media & Recognition",
-    description: "Win grants, press coverage, and international recognition.",
+    description: "Your child can win grants, press coverage, and international recognition — showcasing achievements beyond the classroom.",
     icon: "star",
   },
 ];
