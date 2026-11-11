@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 export default function StoryHero() {
   return (
     <BackgroundPaths title="Your kid has an idea. In 8 weeks, it makes money.">
-      <p className="mx-auto mt-2 max-w-[500px] text-[15px] leading-[1.6] text-dim sm:text-base">
+      <p className="mx-auto mt-2 max-w-[500px] text-[15px] leading-[1.6] text-white/70 sm:text-base">
         We turn curious teenagers into founders — idea to full-stack app to
         real revenue, with 1:1 mentoring every single week.
       </p>

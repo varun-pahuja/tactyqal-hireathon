@@ -242,6 +242,19 @@
   html {
     scroll-behavior: auto;
   }
+  /* journey becomes a plain grid when JS motion is off (reduced motion) */
+  .journey-track {
+    display: grid !important;
+    width: auto !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  }
+  .journey-skew {
+    display: contents !important;
+  }
+  .journey-track .journey-panel {
+    width: auto !important;
+    max-width: none !important;
+  }
   *,
   *::before,
   *::after {
