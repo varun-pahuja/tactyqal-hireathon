@@ -215,22 +215,20 @@
   }
 }
 
-@keyframes waveDrift {
+/* Hero headline letters — CSS so they start at first paint, no hydration wait */
+@keyframes heroLetterIn {
   from {
-    transform: translate3d(0, 0, 0);
+    opacity: 0;
+    transform: translateY(0.45em);
   }
   to {
-    transform: translate3d(-18px, 10px, 0);
+    opacity: 1;
+    transform: none;
   }
 }
-.wave-a {
-  animation: waveDrift 18s ease-in-out infinite alternate;
-}
-.wave-b {
-  animation: waveDrift 24s ease-in-out infinite alternate-reverse;
-}
-.wave-c {
-  animation: waveDrift 30s ease-in-out infinite alternate;
+.hero-letter {
+  opacity: 0; /* until animation starts; fill-mode backwards holds it during delay */
+  animation: heroLetterIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) backwards;
 }
 
 /* Scroll reveal — respects reduced motion */
@@ -263,6 +261,7 @@
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
     transition-duration: 0.01ms !important;
   }
 }
